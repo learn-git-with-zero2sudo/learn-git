@@ -40,7 +40,6 @@ function handleTabSelection(tabName) {
     history.replaceState({}, '', `${location.pathname}?${urlParams}`);
 }
 
-
 function checkQuiz() {
     const correctAnswers = ["a", "c"]; // Replace with the correct answers for each question
 
@@ -59,7 +58,6 @@ function checkQuiz() {
 
     return false; // Prevent form submission
 }
-
 
 function getParameterByName(name) {
     const urlParams = new URLSearchParams(window.location.search);
