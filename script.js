@@ -27,18 +27,13 @@ function getTabContentIdFromCurrentTabId(tabName) {
     console.error('Invalid tab query param! Update this function to handle this tab query param: ', tabName);
 }
 
-function openTab(tabName) {
-    console.log('tab was clicked, tab is: ', tabName);
-    
-    const tabContent = document.getElementsByClassName("tabcontent");
-
-    hideAllTabContentsAndTabStyles();
-
-
-
+function displayTabContentAndStyleSelectedTab(tabName) {
     document.getElementById(getTabContentIdFromCurrentTabId(tabName)).style.display = "block";
     document.getElementById(tabName).classList.add("selected");
+}
 
+function handleTabSelection(tabName) {
+    initializeTab(tabName);
     // Save the selected tab in the query parameter
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('tab', tabName);
@@ -71,11 +66,16 @@ function getParameterByName(name) {
     return urlParams.get(name);
 }
 
+function initializeTab(tabParam) {
+    hideAllTabContentsAndTabStyles();
+    displayTabContentAndStyleSelectedTab(tabParam);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const tabParam = getParameterByName('tab');
 
     if (tabParam) {
-        openTab(tabParam);
+        initializeTab(tabParam);
     } else {
         // If the tab parameter is not present, set it to 'fundamentals'
         history.replaceState({}, '', `${location.pathname}?tab=tab-fundamentals`);
