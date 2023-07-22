@@ -1,18 +1,43 @@
-function openTab(tabName) {
-    /** Handle on click scenario */
+function hideAllTabContentsAndTabStyles() {
     const tabContent = document.getElementsByClassName("tabcontent");
+
+    // On initial load hide all tabContents
     for (let i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
-    /** Handle on click scenario */
+    // On initial load, remove any selected information on the tab
     const tabLinks = document.getElementsByClassName("tablink");
     for (let i = 0; i < tabLinks.length; i++) {
         tabLinks[i].classList.remove("selected");
     }
 
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.classList.add("selected");
+}
+
+// tabName should be a query param value
+function getTabContentIdFromCurrentTabId(tabName) {
+    if (tabName === 'tab-fundamentals') {
+        return 'fundamentals';
+    } 
+    
+    if (tabName === 'tab-quiz') {
+        return 'quiz';
+    }
+
+    console.error('Invalid tab query param! Update this function to handle this tab query param: ', tabName);
+}
+
+function openTab(tabName) {
+    console.log('tab was clicked, tab is: ', tabName);
+    
+    const tabContent = document.getElementsByClassName("tabcontent");
+
+    hideAllTabContentsAndTabStyles();
+
+
+
+    document.getElementById(getTabContentIdFromCurrentTabId(tabName)).style.display = "block";
+    document.getElementById(tabName).classList.add("selected");
 
     // Save the selected tab in the query parameter
     const urlParams = new URLSearchParams(window.location.search);
@@ -48,16 +73,12 @@ function getParameterByName(name) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const tabParam = getParameterByName('tab');
+
     if (tabParam) {
         openTab(tabParam);
-
-        // Highlight the initially selected tab based on the query parameter
-        const tabLinks = document.getElementsByClassName("tablink");
-        for (let i = 0; i < tabLinks.length; i++) {
-            if (tabLinks[i].textContent.toLowerCase() === tabParam.toLowerCase()) {
-                tabLinks[i].classList.add("selected");
-                break;
-            }
-        }
+    } else {
+        // If the tab parameter is not present, set it to 'fundamentals'
+        history.replaceState({}, '', `${location.pathname}?tab=tab-fundamentals`);
+        window.location.reload();
     }
 });
