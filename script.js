@@ -1,9 +1,11 @@
 function openTab(tabName) {
+    /** Handle on click scenario */
     const tabContent = document.getElementsByClassName("tabcontent");
     for (let i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
+    /** Handle on click scenario */
     const tabLinks = document.getElementsByClassName("tablink");
     for (let i = 0; i < tabLinks.length; i++) {
         tabLinks[i].classList.remove("selected");
@@ -48,5 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabParam = getParameterByName('tab');
     if (tabParam) {
         openTab(tabParam);
+
+        // Highlight the initially selected tab based on the query parameter
+        const tabLinks = document.getElementsByClassName("tablink");
+        for (let i = 0; i < tabLinks.length; i++) {
+            if (tabLinks[i].textContent.toLowerCase() === tabParam.toLowerCase()) {
+                tabLinks[i].classList.add("selected");
+                break;
+            }
+        }
     }
 });
