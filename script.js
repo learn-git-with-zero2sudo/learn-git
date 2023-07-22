@@ -4,7 +4,13 @@ function openTab(tabName) {
         tabContent[i].style.display = "none";
     }
 
+    const tabLinks = document.getElementsByClassName("tablink");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("selected");
+    }
+
     document.getElementById(tabName).style.display = "block";
+    event.currentTarget.classList.add("selected");
 }
 
 function checkQuiz() {
