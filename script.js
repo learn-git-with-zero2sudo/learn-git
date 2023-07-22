@@ -11,7 +11,13 @@ function openTab(tabName) {
 
     document.getElementById(tabName).style.display = "block";
     event.currentTarget.classList.add("selected");
+
+    // Save the selected tab in the query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('tab', tabName);
+    history.replaceState({}, '', `${location.pathname}?${urlParams}`);
 }
+
 
 function checkQuiz() {
     const correctAnswers = ["a", "c"]; // Replace with the correct answers for each question
@@ -31,3 +37,16 @@ function checkQuiz() {
 
     return false; // Prevent form submission
 }
+
+
+function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabParam = getParameterByName('tab');
+    if (tabParam) {
+        openTab(tabParam);
+    }
+});
