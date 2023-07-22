@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Concepts Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablink" onclick="openTab('fundamentals')">Git Fundamentals</button>
+            <button class="tablink" onclick="openTab('quiz')">Quiz</button>
+        </div>
+        <div id="fundamentals" class="tabcontent">
+            <h2>Git Fundamentals</h2>
+            <p>Here you can list out the Git concepts and explanations.</p>
+            <ul>
+                <li>Version Control System</li>
+                <li>Repository</li>
+                <li>Commit</li>
+                <li>Branch</li>
+                <li>Merge</li>
+                <!-- Add more Git concepts as needed -->
+            </ul>
+        </div>
+        <div id="quiz" class="tabcontent">
+            <h2>Git Quiz</h2>
+            <p>Select the correct answers:</p>
+            <form onsubmit="return checkQuiz()">
+                <label for="q1">What is the purpose of Git?</label>
+                <br>
+                <input type="radio" name="q1" value="a"> Version Control System<br>
+                <input type="radio" name="q1" value="b"> Web browser<br>
+                <input type="radio" name="q1" value="c"> File storage<br>
+                <br>
+
+                <label for="q2">What is a Git repository?</label>
+                <br>
+                <input type="radio" name="q2" value="a"> A folder to store files<br>
+                <input type="radio" name="q2" value="b"> A place to host a website<br>
+                <input type="radio" name="q2" value="c"> A place to manage and store Git projects<br>
+                <br>
+
+                <!-- Add more quiz questions here -->
+
+                <input type="submit" value="Submit">
+            </form>
+            <p id="quiz-result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

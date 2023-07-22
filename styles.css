@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tablink {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px;
+}
+
+.tabcontent h2 {
+    margin-top: 0;
+}
+
+.tabcontent ul {
+    padding-left: 20px;
+}
+
+.tabcontent p {
+    margin-bottom: 10px;
+}
