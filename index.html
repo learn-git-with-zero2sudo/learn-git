@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <div class="tabs">
-            <button class="tablink" onclick="openTab('fundamentals')">Git Fundamentals</button>
-            <button class="tablink" onclick="openTab('quiz')">Quiz</button>
+            <button id="tab-fundamentals" class="tablink" onclick="handleTabSelection('tab-fundamentals')">Git Fundamentals</button>
+            <button id="tab-quiz" class="tablink" onclick="handleTabSelection('tab-quiz')">Quiz</button>
         </div>
         <div id="fundamentals" class="tabcontent">
             <h2>Git Fundamentals</h2>
