@@ -23,6 +23,40 @@
                 <li>Merge</li>
                 <!-- Add more Git concepts as needed -->
             </ul>
+            <br>
+            
+            <h2>Cloning Repository</h2>
+            <ol>
+                <li>First, we cloned the Repository from github by copying the HTTPS link under the "<> Code" tab.</li>
+                <li>Second, using the terminal in MACOS or Git Bash for Windows, we need to clone the repository
+                    by using the following command: "git clone [respository link]" into the terminal.</li>
+                <li>Now that you have successfully cloned the repo, you need to change the file directory of your terminal to reach the
+                    Git repo. You can do this by using the "cd" command followed by the directory of Git clone.</li>
+                <li>Now you can type the "git branch" command to check what branches are available locally on your device and
+                    the main branch should show as your current branch.</li>
+            </ol>
+            <br>
+
+            <h2>Setting up your Source Tree</h2>
+            <ol>
+                <li>After downloading and setting up your Source Tree account, click the "FIle" tab on the top and open the repo. If you
+                    are unsure on where to find the file, in your terminal type "pwd" to print your working directory.</li>
+                <li>Once opened you will see one whole colloborative workspace which helps you visualize the process better.</li>
+            </ol>
+            <br>
+
+            <h2>Making Commits</h2>
+            <p>Now you should have succesfully set up your repository clone and source tree. Open Visual Studio to make edits.</p>
+            <ol>
+                <li>You will click the "File" tab and click "Open Folder". Go to the same directory and open the learn-git repo to view the .html, .css, and .js files. </li>
+                <li>Head back to your terminal and type "git checkout -b [FirstName1]". This will create a new branch with the features in main. You want to make sure you are on this branch, so 
+                    type "git branch" to see the new branch and "git branch [FirstName1]" to switch to that branch. It should do it automatically when you first create the branch. This is to check for yourself.</li>
+                <li>Now that you have these open make an edit to ONE of the files to keep it simple.</li>
+                <li>After completing the edit you will save it and notice when you open the index.html file from your files, the changes will be made, but the changes still need to commit and push for everyone else to see.</li>
+                <li>Now that you have changed one of the files you will  type "git add [file you edited]" into the terminal, ex. "git add index.html". Once you do this you will commit. You commit by typing in 
+                    "git commit -m '[Title in imparative sentence]'". Keep it concise. </li>
+                <li>Now you will push the branch, which for first time users will require extra steps.</li>
+            </ol>
         </div>
         <div id="quiz" class="tabcontent">
             <h2>Git Quiz</h2>
