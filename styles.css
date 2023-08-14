@@ -40,7 +40,8 @@ body {
 
 .tabcontent > ul > li {
     font-family: fantasy; 
-    font-weight: bold; 
+    font-weight: bold;
+    color: olivedrab; 
 }
 
 .tabcontent p {
