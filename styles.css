@@ -21,8 +21,8 @@ body {
 }
 
 .tablink.selected {
-    background-color: lightblue; /* Change to the color of your choice */
-    color: darkblue; /* Change to the color that provides good contrast with the background */
+    background-color: lightpink; /* Change to the color of your choice */
+    color: purple; /* Change to the color that provides good contrast with the background */
 }
 
 .tabcontent {
