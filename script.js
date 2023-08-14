@@ -80,3 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.reload();
     }
 });
+
+
+function appendLi(textOfLi) {
+    let newLi = document.createElement("li");
+    newLi.textContent = textOfLi;
+
+    let existingListParentNode = document.querySelector('ul');
+    existingListParentNode.appendChild(newLi);
+} 
+
+appendLi("The Odin Project's \"setup git\" tutorial is very informative!");
