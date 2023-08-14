@@ -39,7 +39,8 @@ body {
 }
 
 .tabcontent > ul > li {
-    font: fantasy bold; 
+    font-family: fantasy; 
+    font-weight: bold; 
 }
 
 .tabcontent p {
