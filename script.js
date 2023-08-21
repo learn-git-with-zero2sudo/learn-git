@@ -1,3 +1,16 @@
+const fundamentalList = document.getElementById('fundamental-list');
+
+const addFundamentalForm = document.getElementById('add-fundamental')
+
+const newFundamentalField = document.getElementById('new-fundamental')
+
+addFundamentalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newFundamental = newFundamentalField.value;
+    addGitFundamental(newFundamental);
+    addFundamentalForm.reset();
+})
+
 function hideAllTabContentsAndTabStyles() {
     const tabContent = document.getElementsByClassName("tabcontent");
 
@@ -18,8 +31,8 @@ function hideAllTabContentsAndTabStyles() {
 function getTabContentIdFromCurrentTabId(tabName) {
     if (tabName === 'tab-fundamentals') {
         return 'fundamentals';
-    } 
-    
+    }
+
     if (tabName === 'tab-quiz') {
         return 'quiz';
     }
@@ -80,3 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.reload();
     }
 });
+
+function addGitFundamental(fundamental) {
+    const newFundamental = document.createElement('li')
+    newFundamental.textContent = fundamental;
+    fundamentalList.appendChild(newFundamental);
+}
