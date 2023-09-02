@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#title1 {
+    color: red;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -42,10 +46,3 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
 }
-
-<<<<<<< HEAD
-=======
-h2 {
-    color: brown;
-}
->>>>>>> 533c47bcd0f7c508a9241a89ac63cfa49403be80
