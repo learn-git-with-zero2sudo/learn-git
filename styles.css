@@ -25,7 +25,7 @@ body {
 }
 
 .tablink.selected {
-    background-color: gold; /* Change to the color of your choice */
+    background-color: yellow; /* Change to the color of your choice */
     color: white; /* Change to the color that provides good contrast with the background */
 }
 
