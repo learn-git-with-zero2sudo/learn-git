@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.title1 {
+    color: blue;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tablink {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.tablink.selected {
+    background-color: yellow; /* Change to the color of your choice */
+    color: white; /* Change to the color that provides good contrast with the background */
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px;
+}
+
+.tabcontent h2 {
+    margin-top: 0;
+}
+
+.tabcontent ul {
+    padding-left: 20px;
+}
+
+.tabcontent p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}

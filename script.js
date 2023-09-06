@@ -1,3 +1,13 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+//renders react component react quiz
+ReactDOM.render(<ReactQuiz />, document.getElementById('reactroot'));
+
+function ReactQuiz(){
+    <div>HI</div>
+}
+    
 function hideAllTabContentsAndTabStyles() {
     const tabContent = document.getElementsByClassName("tabcontent");
 
