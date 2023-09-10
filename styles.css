@@ -42,6 +42,12 @@ body {
     padding-left: 20px;
 }
 
+.tabcontent > ul > li {
+    font-family: fantasy; 
+    font-weight: bold;
+    color: olivedrab; 
+}
+
 .tabcontent p {
     margin-bottom: 10px;
     font-weight: bold;
