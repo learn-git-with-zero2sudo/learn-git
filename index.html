@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Concepts Tutorial</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="tabs">
-            <button id="tab-fundamentals" class="tablink" onclick="handleTabSelection('tab-fundamentals')">Git Fundamentals</button>
+            <button id="tab-fundamentals" class="tablink" onclick="handleTabSelection('tab-fundamentals')">Git
+                Fundamentals</button>
             <button id="tab-quiz" class="tablink" onclick="handleTabSelection('tab-quiz')">Quiz</button>
         </div>
         <div id="fundamentals" class="tabcontent">
             <h2 id="title1">Git Fundamentals</h2>
             <p>Here you can list out the Git concepts and explanations.</p>
-            <ul>
+            <ul id="fundamental-list">
                 <li>Version Control System - A software program that helps track changes to a codebase over time</li>
                 <li>Repository - Tracks and saves changes made in git files over time</li>
                 <li>Commit - Sends latest changes to source code along with an optional message with -m</li>
@@ -29,6 +32,11 @@
                 <li>"The Odin Project's \"setup git\" tutorial is very informative!"</li>
                 <!-- Add more Git concepts as needed -->
             </ul>
+            <form id="add-fundamental">
+                <label>Add a Git Fundamental that you see missing:</label>
+                <input id="new-fundamental" type="text">
+                <button>Submit</button>
+            </form>
         </div>
         <div id="quiz" class="tabcontent">
             <h2>Git Quiz</h2>
@@ -39,7 +47,9 @@
                 <input type="radio" name="q1" value="a"> Rice = UW<br>
                 <input type="radio" name="q1" value="b"> Web browser<br>
                 <input type="radio" name="q1" value="c"> File storage<br>
-                <input type="radio" name="q1" value="d"> Time machine for code. Track changes, collaborate seamlessly, and undo mistakes in your software projects<br>
+                <input type="radio" name="q1" value="d"> Time machine for code. Track changes, collaborate seamlessly,
+                and undo mistakes in your software projects<br>
+                <input type="radio" name="q1" value="e"> See who broke the code <br>
 
                 <label for="q2">What is a Git repository?</label>
                 <br>
@@ -47,7 +57,7 @@
                 <input type="radio" name="q2" value="b"> A place to host a website<br>
                 <input type="radio" name="q2" value="c"> A place to manage and store Git projects<br>
                 <br>
-                
+
                 <label> Which command is used to initialize a new Git repository?</label>
                 <br>
                 <input type="radio" name="q3" value="a"> Git clone <br>
@@ -64,19 +74,22 @@
 
                 <label> What is the purpose of the "git pull" command? </label>
                 <br>
-                <input type="radio" name="q5" value="a"> Retrieves changes from a remote repository and automatically merges them into the current branch <br>
+                <input type="radio" name="q5" value="a"> Retrieves changes from a remote repository and automatically
+                merges them into the current branch <br>
                 <input type="radio" name="q5" value="b"> Pushes changes to a remote repository <br>
                 <input type="radio" name="q5" value="c"> Creates a new branch from the current branch <br>
                 <br>
 
-                <label>How do you check the status of your Git repository and see which files have been modified?  </label>
+                <label>How do you check the status of your Git repository and see which files have been modified?
+                </label>
                 <br>
                 <input type="radio" name="q6" value="a"> Git log <br>
                 <input type="radio" name="q6" value="b"> Git status <br>
                 <input type="radio" name="q6" value="c"> Git diff <br>
                 <br>
 
-                <label>How do you check the status of your Git repository and see which files have been modified?  </label>
+                <label>How do you check the status of your Git repository and see which files have been modified?
+                </label>
                 <br>
                 <input type="radio" name="q7" value="a"> Git log <br>
                 <input type="radio" name="q7" value="b"> Git status <br>
@@ -98,4 +111,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
